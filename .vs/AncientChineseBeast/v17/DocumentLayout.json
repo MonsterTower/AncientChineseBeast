@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Work\\RimWorld\\RWdll\u5E93\\AncientChineseBeast\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E1D82AA7-6E55-454B-BE40-C3E38FE2C14C}|AncientChineseBeast.csproj|c:\\work\\rimworld\\rwdll\u5E93\\ancientchinesebeast\\yearflameprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1D82AA7-6E55-454B-BE40-C3E38FE2C14C}|AncientChineseBeast.csproj|solutionrelative:yearflameprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1D82AA7-6E55-454B-BE40-C3E38FE2C14C}|AncientChineseBeast.csproj|c:\\work\\rimworld\\rwdll\u5E93\\ancientchinesebeast\\compconnaturalabilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1D82AA7-6E55-454B-BE40-C3E38FE2C14C}|AncientChineseBeast.csproj|solutionrelative:compconnaturalabilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1D82AA7-6E55-454B-BE40-C3E38FE2C14C}|AncientChineseBeast.csproj|c:\\work\\rimworld\\rwdll\u5E93\\ancientchinesebeast\\yearflame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1D82AA7-6E55-454B-BE40-C3E38FE2C14C}|AncientChineseBeast.csproj|solutionrelative:yearflame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1D82AA7-6E55-454B-BE40-C3E38FE2C14C}|AncientChineseBeast.csproj|c:\\work\\rimworld\\rwdll\u5E93\\ancientchinesebeast\\qiongqistrike.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1D82AA7-6E55-454B-BE40-C3E38FE2C14C}|AncientChineseBeast.csproj|solutionrelative:qiongqistrike.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1D82AA7-6E55-454B-BE40-C3E38FE2C14C}|AncientChineseBeast.csproj|c:\\work\\rimworld\\rwdll\u5E93\\ancientchinesebeast\\pawnflyingstrike.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1D82AA7-6E55-454B-BE40-C3E38FE2C14C}|AncientChineseBeast.csproj|solutionrelative:pawnflyingstrike.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "YearFlameProjectile.cs",
+              "DocumentMoniker": "C:\\Work\\RimWorld\\RWdll\u5E93\\AncientChineseBeast\\YearFlameProjectile.cs",
+              "RelativeDocumentMoniker": "YearFlameProjectile.cs",
+              "ToolTip": "C:\\Work\\RimWorld\\RWdll\u5E93\\AncientChineseBeast\\YearFlameProjectile.cs",
+              "RelativeToolTip": "YearFlameProjectile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T02:32:42.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CompConnaturalAbilities.cs",
+              "DocumentMoniker": "C:\\Work\\RimWorld\\RWdll\u5E93\\AncientChineseBeast\\CompConnaturalAbilities.cs",
+              "RelativeDocumentMoniker": "CompConnaturalAbilities.cs",
+              "ToolTip": "C:\\Work\\RimWorld\\RWdll\u5E93\\AncientChineseBeast\\CompConnaturalAbilities.cs",
+              "RelativeToolTip": "CompConnaturalAbilities.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAMwCYAAACYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T02:31:48.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "YearFlame.cs",
+              "DocumentMoniker": "C:\\Work\\RimWorld\\RWdll\u5E93\\AncientChineseBeast\\YearFlame.cs",
+              "RelativeDocumentMoniker": "YearFlame.cs",
+              "ToolTip": "C:\\Work\\RimWorld\\RWdll\u5E93\\AncientChineseBeast\\YearFlame.cs",
+              "RelativeToolTip": "YearFlame.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAMwBMAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T02:31:40.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "QiongQiStrike.cs",
+              "DocumentMoniker": "C:\\Work\\RimWorld\\RWdll\u5E93\\AncientChineseBeast\\QiongQiStrike.cs",
+              "RelativeDocumentMoniker": "QiongQiStrike.cs",
+              "ToolTip": "C:\\Work\\RimWorld\\RWdll\u5E93\\AncientChineseBeast\\QiongQiStrike.cs",
+              "RelativeToolTip": "QiongQiStrike.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAMwB4AAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T02:31:27.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PawnFlyingStrike.cs",
+              "DocumentMoniker": "C:\\Work\\RimWorld\\RWdll\u5E93\\AncientChineseBeast\\PawnFlyingStrike.cs",
+              "RelativeDocumentMoniker": "PawnFlyingStrike.cs",
+              "ToolTip": "C:\\Work\\RimWorld\\RWdll\u5E93\\AncientChineseBeast\\PawnFlyingStrike.cs",
+              "RelativeToolTip": "PawnFlyingStrike.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAlwEgAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T02:29:39.189Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1D82AA7-6E55-454B-BE40-C3E38FE2C14C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AncientChineseBeast</RootNamespace>
+    <AssemblyName>AncientChineseBeast</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\Game\Steam\steamapps\workshop\content\294100\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\Game\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\Game\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\Game\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\Game\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\..\Game\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\..\..\Game\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ability_Draw.cs" />
+    <Compile Include="Ability_BerserkRing.cs" />
+    <Compile Include="Ability_WindBarrier.cs" />
+    <Compile Include="Cells.cs" />
+    <Compile Include="DefModExtension_CloneBeast.cs" />
+    <Compile Include="CompProperties_AIExpansionFriendly.cs" />
+    <Compile Include="CompAIExpansion_Friendly.cs" />
+    <Compile Include="DefModExtension_PreventPermanentInjuries.cs" />
+    <Compile Include="Harmony\HediffComp_GetsPermanent_Patch.cs" />
+    <Compile Include="IncidentWorker_ChickenPasses.cs" />
+    <Compile Include="DefModExtension_Genes.cs" />
+    <Compile Include="CompAbilityEffect_Crow.cs" />
+    <Compile Include="CompChickenAIExpansion.cs" />
+    <Compile Include="DamageWorker_SoundWaveDamage.cs" />
+    <Compile Include="CompMingSheAIExpansion.cs" />
+    <Compile Include="CompSZBeastDebug.cs" />
+    <Compile Include="DefModExtension_Beasts.cs" />
+    <Compile Include="Harmony\DoRecipe.cs" />
+    <Compile Include="IncidentWorker_TunnelBeastApproach.cs" />
+    <Compile Include="IncidentWorker_BeastApproach.cs" />
+    <Compile Include="SeXieTunnelSpawner.cs" />
+    <Compile Include="Gene_Strength.cs" />
+    <Compile Include="CompAbilityEffect_BerserkRing.cs" />
+    <Compile Include="Harmony\GetBodyPartHealth.cs" />
+    <Compile Include="Verb_MeleeAttackDamage_Area.cs" />
+    <Compile Include="JobGiver_SeXieKillHuman.cs" />
+    <Compile Include="CompSeXieExpansion.cs" />
+    <Compile Include="CompProperties_CausePermanentGameCondition.cs" />
+    <Compile Include="CompCausePermanentGameCondition.cs" />
+    <Compile Include="Verb_ShootStatic.cs" />
+    <Compile Include="JobGiver_MingSheKillHuman.cs" />
+    <Compile Include="JobGiver_YearKillHuman.cs" />
+    <Compile Include="CompActiveAfterTakenDamage.cs" />
+    <Compile Include="ThinkNode_TakenDamageWithComp.cs" />
+    <Compile Include="JobDriver_ExtractGene.cs" />
+    <Compile Include="CompCauseGameCondition_WithLetter.cs" />
+    <Compile Include="CompProperties_CausesGameConditionWithLetter.cs" />
+    <Compile Include="CompAbilityEffect_WindBarrier.cs" />
+    <Compile Include="GameCondition_MingSheDrought.cs" />
+    <Compile Include="CompGenesInCorpse.cs" />
+    <Compile Include="CompProperties_LeftGeneLootWhenDying.cs" />
+    <Compile Include="Harmony\AbilityDrawer.cs" />
+    <Compile Include="Harmony\StoreProjectiles.cs" />
+    <Compile Include="DamageWorker_SoundWave.cs" />
+    <Compile Include="CompAbilityEffect_SoundWave.cs" />
+    <Compile Include="CompAbilityEffect_SectorCells.cs" />
+    <Compile Include="QiongQiStrike.cs" />
+    <Compile Include="CompQiongQiAIExpansion.cs" />
+    <Compile Include="DefModExtension_GeneHediffs.cs" />
+    <Compile Include="Gene_Hediffs.cs" />
+    <Compile Include="JobGiver_KillHuman.cs" />
+    <Compile Include="JobGiver_QiongQiKillHuman.cs" />
+    <Compile Include="Verb_FlyingStrike.cs" />
+    <Compile Include="PawnFlyingStrike.cs" />
+    <Compile Include="Harmony\ProjectileImpact_Patch.cs" />
+    <Compile Include="Verb_MeleeAttackDamage_HitHead.cs" />
+    <Compile Include="IncidentWorker_YearBeastApproach.cs" />
+    <Compile Include="Harmony\DoSingleTick.cs" />
+    <Compile Include="Singleton.cs" />
+    <Compile Include="CompAbilityEffect_JetFlame.cs" />
+    <Compile Include="Harmony\ExposeDataPatch.cs" />
+    <Compile Include="Harmony\PatchMain.cs" />
+    <Compile Include="YearFlameProjectile.cs" />
+    <Compile Include="Graphic_Animation.cs" />
+    <Compile Include="IAnimationThing.cs" />
+    <Compile Include="YearFlame.cs" />
+    <Compile Include="Verb_CastAbility.cs" />
+    <Compile Include="CompProperties_ConnaturalAbilities.cs" />
+    <Compile Include="CompConnaturalAbilities.cs" />
+    <Compile Include="JobGiver_KillHuman_RangedAbility.cs" />
+    <Compile Include="Firecracker.cs" />
+    <Compile Include="DamageWorker_Firecracker.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
