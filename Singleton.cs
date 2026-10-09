@@ -53,7 +53,27 @@ namespace AncientChineseBeast
                 }
             }
         }
-        public void BeastApproach()
+        // Which beast the incident is about. Fired any way other than BeastApproach (e.g. the development menu), `beast` is null.
+        // Each incident def carries its own list in a DefModExtension_Beasts, so there is always an answer available.
+        public BeastClass BeastFor(IncidentDef incident)
+        {
+            var extension = incident?.GetModExtension<DefModExtension_Beasts>();
+            // Older saves contain a deep copy of the letter in the language used at save time.
+            // Resolve the same pawn kind against the current Def so a language change takes effect.
+            if (beast != null && extension != null)
+            {
+                BeastClass current = extension.beasts.Find(candidate => candidate.pawn == beast.pawn);
+                if (current != null) beast = current;
+            }
+            if (beast == null)
+            {
+                if (extension != null && extension.beasts.Count > 0) beast = extension.beasts.RandomElement();
+            }
+            return beast;
+        }
+        // forced is for the development action: an incident that is not forced answers to the storyteller's difficulty
+        // and to its own conditions, and the action did nothing at all when CanFireNow said no.
+        public void BeastApproach(bool forced = false)
         {
             Map map = Find.Maps.FindAll((Map x) => x.IsPlayerHome).RandomElement();
             IncidentDef incidentA = IncidentDef.Named("SZ_BeastApproach");
@@ -62,6 +82,7 @@ namespace AncientChineseBeast
             var B = incidentB.GetModExtension<DefModExtension_Beasts>().beasts;
             int index = Rand.Range(1, A.Count + B.Count + 1);
             IncidentParms parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.ThreatBig, map);
+            parms.forced = forced;
             if (index > A.Count)
             {
                 beast = B[index - A.Count - 1];

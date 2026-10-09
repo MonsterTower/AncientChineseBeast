@@ -34,7 +34,7 @@ namespace AncientChineseBeast
                 }
             }
         }
-        public override void Tick()
+        protected override void Tick()
         {
             if (timingTicks == -1)
             {
@@ -55,7 +55,7 @@ namespace AncientChineseBeast
         }
         private void DoExplosion()
         {
-            GenExplosion.DoExplosion(Position, Map, SpreadRange, DefDatabase<DamageDef>.GetNamed(NextLevel), instigator, -1, -1, SoundDef.Named("SZ_Firecracker"), weapon, projectile, null, null, 0, 0, null, false, null, 0, 0, 0, false, null, null, null, false);
+            GenExplosion.DoExplosion(Position, Map, SpreadRange, DefDatabase<DamageDef>.GetNamed(NextLevel), instigator, explosionSound: SoundDef.Named("SZ_Firecracker"), weapon: weapon, projectile: projectile, postExplosionSpawnThingCount: 0, preExplosionSpawnThingCount: 0, doVisualEffects: false);
             Destroy();
         }
         public override void ExposeData()

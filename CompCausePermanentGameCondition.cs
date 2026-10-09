@@ -17,9 +17,11 @@ namespace AncientChineseBeast
             gameCondition.conditionCauser = this.parent;
             parent.Map.gameConditionManager.RegisterCondition(gameCondition);
         }
-        public override void PostDeSpawn(Map map)
+        // 1.6 added a DestroyMode to ThingComp.PostDeSpawn; the one-argument form is never called
+        // and would leave the permanent game condition running after its causer is gone.
+        public override void PostDeSpawn(Map map, DestroyMode mode)
         {
-            condition.End();
+            condition?.End();
         }
         public override void PostExposeData()
         {

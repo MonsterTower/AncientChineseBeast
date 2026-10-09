@@ -80,8 +80,13 @@ namespace AncientChineseBeast
                             projectile2.Launch(pawn, projectiles[0].DrawPos, localTarget, projectiles[0].Launcher, ProjectileHitFlags.All, false, ThingMaker.MakeThing(projectiles[0].EquipmentDef), null);
                         }
                     }
-                    projectiles[0].Destroy();
-                    projectiles.Remove(projectiles[0]);
+                    // A projectile can already be gone by now (it hit something in the same tick, or it is in the list twice):
+                    // destroying it again threw a null reference out of ListerThings.Remove and the whole tick of the mingshe with it.
+                    if (projectiles[0].Spawned && !projectiles[0].Destroyed)
+                    {
+                        projectiles[0].Destroy();
+                    }
+                    projectiles.RemoveAt(0);
                 }
             }
         }

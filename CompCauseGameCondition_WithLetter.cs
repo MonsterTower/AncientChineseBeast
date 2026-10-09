@@ -15,7 +15,14 @@ namespace AncientChineseBeast
         }
         public override void PostDestroy(DestroyMode mode, Map previousMap)
         {
-            (typeof(CompCausePermanentGameCondition).GetField("condition", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(this) as GameCondition).End();
+            // This read the private "condition" field off CompCausePermanentGameCondition, a different class
+            // in this mod that this comp does not derive from, so FieldInfo.GetValue threw every time and the
+            // message below never got posted. The conditions this comp actually causes are the ones its own
+            // base class tracks.
+            foreach (GameCondition condition in CausedConditions)
+            {
+                condition.End();
+            }
             Messages.Message(Props.text, new TargetInfo(parent.Position, previousMap, false), MessageTypeDefOf.NeutralEvent, true);
         }
     }

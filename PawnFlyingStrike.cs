@@ -8,16 +8,17 @@ namespace AncientChineseBeast
 {
     public class PawnFlyingStrike : PawnFlyer
     {
-        public override void Tick()
+        // 1.6 moved the flyer's flight logic from Tick() into TickInterval(int delta); PawnFlyer no longer overrides Tick().
+        protected override void TickInterval(int delta)
         {
-            DoubleTick();
+            DoubleTick(delta);
             if (Spawned)
             {
-                DoubleTick();
+                DoubleTick(delta);
             }
         }
 
-        private void DoubleTick()
+        private void DoubleTick(int delta)
         {
             int num = GenRadial.NumCellsInRadius(3.9f);
             for (int i = 0; i < num; i++)
@@ -47,7 +48,7 @@ namespace AncientChineseBeast
                 targets.RemoveAt(targets.Count - 1);
             }
             RecomputePosition();
-            base.Tick();
+            base.TickInterval(delta);
         }
 
         private void RecomputePosition()

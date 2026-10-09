@@ -36,7 +36,7 @@ namespace AncientChineseBeast
 
             Graphic.Draw(drawLoc, Rot4.North, this, angle);
         }
-        public override void Tick()
+        protected override void Tick()
         {
             spawnTime++;
             if (spawnTime >= 20)

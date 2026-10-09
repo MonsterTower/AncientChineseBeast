@@ -20,7 +20,7 @@ namespace AncientChineseBeast
         protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
             Vector3 drawPos = origin;
-            drawPos.y = AltitudeLayer.PawnUnused.AltitudeFor();
+            drawPos.y = AltitudeLayer.Projectile.AltitudeFor();
             Graphic.Draw(drawPos, Rot4.North, this, angle);
         }
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
@@ -31,7 +31,7 @@ namespace AncientChineseBeast
                 origin = Position.ToVector3Shifted();
             }
         }
-        public override void Tick()
+        protected override void Tick()
         {
             fireTime++;
             if (fireTime % 12 == 0)

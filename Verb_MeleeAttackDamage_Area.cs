@@ -36,16 +36,15 @@ namespace AncientChineseBeast
             while (targets.Count > 0)
             {
                 var x = targets[targets.Count - 1];
-                if (!CanHitTarget(x))
+                if (CanHitTarget(x))
                 {
-                    continue;
+                    currentTarget = x;
+                    if (base.TryCastShot())
+                    {
+                        result = true;
+                    }
+                    targets.RemoveAt(targets.Count - 1);
                 }
-                currentTarget = x;
-                if (base.TryCastShot())
-                {
-                    result = true;
-                }
-                targets.RemoveAt(targets.Count - 1);
             }
             return result;
         }

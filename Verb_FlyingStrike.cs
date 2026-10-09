@@ -15,7 +15,7 @@ namespace AncientChineseBeast
         }
         public override bool ValidateTarget(LocalTargetInfo target, bool showMessages = true)
         {
-            return caster != null && CanHitTarget(target) && JumpUtility.ValidJumpTarget(caster.Map, target.Cell);
+            return caster != null && CanHitTarget(target) && JumpUtility.ValidJumpTarget(caster, caster.Map, target.Cell);
         }
         public override bool CanHitTargetFrom(IntVec3 root, LocalTargetInfo targ)
         {
@@ -30,7 +30,7 @@ namespace AncientChineseBeast
         }
         public override void OnGUI(LocalTargetInfo target)
         {
-            if (CanHitTarget(target) && JumpUtility.ValidJumpTarget(this.caster.Map, target.Cell))
+            if (CanHitTarget(target) && JumpUtility.ValidJumpTarget(caster, this.caster.Map, target.Cell))
             {
                 base.OnGUI(target);
                 return;

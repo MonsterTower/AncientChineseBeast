@@ -104,7 +104,7 @@ namespace AncientChineseBeast
             }
 
         }
-        public override void PostDeSpawn(Map map)
+        public override void PostDeSpawn(Map map, DestroyMode mode)
         {
             if (parent.def.defName == "SZ_SeXie" && parent.Faction != Faction.OfPlayer)
             {

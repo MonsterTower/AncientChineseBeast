@@ -38,7 +38,7 @@ namespace AncientChineseBeast
             IntVec3 intVec = pawn.mindState.enemyTarget.PositionHeld;
             if (pawn.CanReach(intVec, PathEndMode.OnCell, Danger.Deadly, false, false, TraverseMode.PassAllDestroyableThings))
             {
-                using (PawnPath pawnPath = pawn.Map.pathFinder.FindPath(pawn.Position, intVec, TraverseParms.For(pawn, Danger.Deadly, TraverseMode.PassAllDestroyableThings, false, false, false), PathEndMode.OnCell, null))
+                using (PawnPath pawnPath = pawn.Map.pathFinder.FindPathNow(pawn.Position, intVec, TraverseParms.For(pawn, Danger.Deadly, TraverseMode.PassAllDestroyableThings, false, false, false), null, PathEndMode.OnCell))
                 {
                     Thing thing = pawnPath.FirstBlockingBuilding(out IntVec3 cellBeforeBlocker, pawn);
                     if (thing != null)
